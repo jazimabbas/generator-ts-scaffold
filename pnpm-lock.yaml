@@ -11,6 +11,9 @@ importers:
       yeoman-generator:
         specifier: ^7.5.1
         version: 7.5.1(@types/node@24.0.14)(@yeoman/types@1.6.0(@types/node@24.0.14)(mem-fs-editor@11.1.4(mem-fs@4.1.2))(mem-fs@4.1.2))(mem-fs@4.1.2)
+      zod:
+        specifier: ^4.0.5
+        version: 4.0.5
     devDependencies:
       '@types/inquirer':
         specifier: ^9.0.8
@@ -1227,6 +1230,9 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
+
+  zod@4.0.5:
+    resolution: {integrity: sha512-/5UuuRPStvHXu7RS+gmvRf4NXrNxpSllGwDnCBcJZtQsKrviYXm54yDGV2KYNLT5kq0lHGcl7lqWJLgSaG+tgA==}
 
 snapshots:
 
@@ -2511,3 +2517,5 @@ snapshots:
       '@types/node': 24.0.14
     transitivePeerDependencies:
       - supports-color
+
+  zod@4.0.5: {}

@@ -1,5 +1,5 @@
 {
-  "name": "@jazim/generator-ts-scaffold",
+  "name": "<%= packageName %>",
   "version": "1.0.0",
   "description": "TypeScript scaffolding for Yeoman generators",
   "type": "module",
@@ -16,10 +16,10 @@
   "keywords": [
     "yeoman-generator"
   ],
-  "author": "Jazim Abbas",
-  "homepage": "https://github.com/jazimabbas/generator-ts-scaffold",
+  "author": "<%= author %>",
+  "homepage": "<%= repositoryUrl %>",
   "repository": {
-    "url": "https://github.com/jazimabbas/generator-ts-scaffold"
+    "url": "<%= repositoryUrl %>"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.10.0",

@@ -1,3 +1,7 @@
+<%
+const withoutGenerator = packageName.replace(/generator-/, '');
+%>
+
 # TypeScript Scaffolding for Yeoman Generators
 
 This is a Yeoman generator for scaffolding TypeScript projects. It provides a set of templates and best practices for building TypeScript applications.
@@ -14,13 +18,13 @@ This is a Yeoman generator for scaffolding TypeScript projects. It provides a se
 
 ```bash
 npm install -g yo
-npm install -g @jazim/generator-ts-scaffold
+npm install -g <%= packageName %>
 ```
 
 ## Usage
 
 ```bash
-yo @jazim/ts-scaffold
+yo <%= withoutGenerator %>
 ```
 
 ## For Local Development
@@ -39,7 +43,7 @@ yo --generators
 You can unlink it later after you are done with development:
 
 ```bash
-npm unlink -g @jazim/generator-ts-scaffold
+npm unlink -g <%= packageName %>
 ```
 
 To verify that the generator is unlinked, you can run:
