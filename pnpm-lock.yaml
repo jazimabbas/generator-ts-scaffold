@@ -4,10 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@jazim/gen-core': link:../gen-core
+
 importers:
 
   .:
     dependencies:
+      '@jazim/gen-utils':
+        specifier: ^1.0.0
+        version: 1.0.0(yeoman-generator@7.5.1(@types/node@24.0.14)(@yeoman/types@1.6.0(@types/node@24.0.14)(mem-fs-editor@11.1.4(mem-fs@4.1.2))(mem-fs@4.1.2))(mem-fs@4.1.2))
       yeoman-generator:
         specifier: ^7.5.1
         version: 7.5.1(@types/node@24.0.14)(@yeoman/types@1.6.0(@types/node@24.0.14)(mem-fs-editor@11.1.4(mem-fs@4.1.2))(mem-fs@4.1.2))(mem-fs@4.1.2)
@@ -37,6 +43,11 @@ packages:
   '@babel/helper-validator-identifier@7.27.1':
     resolution: {integrity: sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow==}
     engines: {node: '>=6.9.0'}
+
+  '@jazim/gen-utils@1.0.0':
+    resolution: {integrity: sha512-V3FZMO0mIv7FdWrFDjVJEkmF/6xIqBuIVIGeWl64CrvukCNeYmX4HRRisHW7t+4omtA5tH96679fX+ntJsltLQ==}
+    peerDependencies:
+      yeoman-generator: '>=7.0.0'
 
   '@kwsites/file-exists@1.1.1':
     resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==}
@@ -1243,6 +1254,10 @@ snapshots:
       picocolors: 1.1.1
 
   '@babel/helper-validator-identifier@7.27.1': {}
+
+  '@jazim/gen-utils@1.0.0(yeoman-generator@7.5.1(@types/node@24.0.14)(@yeoman/types@1.6.0(@types/node@24.0.14)(mem-fs-editor@11.1.4(mem-fs@4.1.2))(mem-fs@4.1.2))(mem-fs@4.1.2))':
+    dependencies:
+      yeoman-generator: 7.5.1(@types/node@24.0.14)(@yeoman/types@1.6.0(@types/node@24.0.14)(mem-fs-editor@11.1.4(mem-fs@4.1.2))(mem-fs@4.1.2))(mem-fs@4.1.2)
 
   '@kwsites/file-exists@1.1.1':
     dependencies:

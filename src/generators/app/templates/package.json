@@ -24,6 +24,7 @@
   "license": "MIT",
   "packageManager": "pnpm@10.10.0",
   "dependencies": {
+    "@jazim/gen-utils": "^1.0.0",
     "yeoman-generator": "^7.5.1",
     "zod": "^4.0.5"
   },

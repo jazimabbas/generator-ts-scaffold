@@ -1,21 +1,15 @@
-import Generator from "yeoman-generator";
 import { QuestionCollection } from "inquirer";
+import { BaseGenerator } from "@jazim/gen-utils";
 
 type Questions = {
   name: string;
 };
 
-export default class AppGenerator extends Generator {
+export default class AppGenerator extends BaseGenerator {
   private answers!: Questions;
 
   constructor(args: any, opts: any) {
     super(args, opts);
-
-    this.option("pm", {
-      type: String,
-      description: "Package manager to use (npm, yarn, pnpm)",
-      default: "pnpm",
-    });
   }
 
   async prompting() {
@@ -36,9 +30,5 @@ export default class AppGenerator extends Generator {
     this.fs.copyTpl(this.templatePath("index.html"), this.destinationPath("index.html"), {
       name: this.answers.name,
     });
-  }
-
-  install() {
-    (this.env as any).options.nodePackageManager = (this.options as any)["pm"];
   }
 }
