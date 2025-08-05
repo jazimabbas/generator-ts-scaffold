@@ -1,6 +1,6 @@
 {
   "name": "@jazim/generator-ts-scaffold",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "TypeScript scaffolding for Yeoman generators",
   "type": "module",
   "exports": {

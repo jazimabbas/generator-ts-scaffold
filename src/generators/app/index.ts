@@ -55,10 +55,13 @@ export default class AppGenerator extends BaseGenerator {
   }
 
   writing() {
-    const files = [".gitignore", "README.md", "tsconfig.json", "package.json", "LICENSE"];
+    const files = ["README.md", "tsconfig.json", "package.json", "LICENSE"];
     files.forEach((file) => {
       this.fs.copyTpl(this.templatePath(file), this.destinationPath(file), this.answers);
     });
+
+    // doing this because npm does not allow .gitignore in the root
+    this.fs.copy(this.templatePath("gitignore"), this.destinationPath(".gitignore"));
 
     this.fs.copy(this.templatePath("src/**/*"), this.destinationPath("src/"));
   }
